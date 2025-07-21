@@ -1,0 +1,174 @@
+
+/* 
+ * styles.css - Estilos para todos os exercícios do projeto
+ * Inclui: header, main, footer, galeria, seletores especiais e menu hamburger (apenas exercício 7)
+ */
+
+
+header {
+    background-color: #FF8C42; /* laranja queimado */
+    color: #fff;
+    margin: 20px 0 15px 0;
+    padding: 20px;
+    border: 3px solid #CC5803; /* tom mais escuro */
+    border-radius: 8px;
+}
+
+main {
+    background-color: #FFF3E0; /* laranja claro, quase bege */
+    color: #542e0d; /* marrom escuro */
+    margin: 0 0 15px 0;
+    padding: 20px;
+    border: 2px solid #FFA45B; /* laranja queimado claro */
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #CC5803; /* laranja queimado escuro */
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+    border: 3px solid #FF8C42;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+/* H2 maior e sublinhado */
+h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+/* Classe destaque: itálico e fundo suave */
+.destaque {
+    font-style: italic;
+    background-color: #ffe5b4; /* tom suave de laranja claro */
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* ID importante: borda superior espessa */
+#importante {
+    border-top: 5px solid #CC5803; /* laranja queimado escuro */
+    padding-top: 8px;
+}
+
+.galeria-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 18px;
+    background-color: #FFF3E0;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px #ccc7;
+}
+
+.galeria-grid figure {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 4px #ffa45baa;
+    overflow: hidden;
+    text-align: center;
+}
+
+.galeria-grid img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; /* Preenche o quadrado cortando o excesso, mantendo centralizada */
+    display: block;
+    margin: 0 auto;
+}
+
+
+.galeria-grid figcaption {
+    font-size: 1rem;
+    padding: 6px 0;
+    color: #CC5803;
+    background: #fff3e0;
+    font-weight: 500;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.menu-nav {
+    position: relative;
+    background: #FF8C42;
+    padding: 10px 20px;
+}
+
+/* Hamburger: visível só em telas pequenas */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Menu padrão */
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+}
+
+.menu-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.menu-list li a:hover {
+    background: #FFA45B;
+    color: #542e0d;
+}
+
+/* Responsivo: até 600px, só mostra hamburger */
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #FF8C42;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 2px 10px #cc580377;
+        padding: 10px 0;
+    }
+    .menu-list.active {
+        display: flex;
+    }
+}
+

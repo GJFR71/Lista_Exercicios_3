@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 7 - Menu Hamburger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-nav {
+            position: relative;
+            background: #FF8C42;
+            padding: 10px 20px;
+        }
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 18px;
+        }
+        .menu-list li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .menu-list li a:hover {
+            background: #FFA45B;
+            color: #542e0d;
+        }
+        /* Responsivo: até 600px, só mostra o hamburger */
+        @media (max-width: 600px) {
+            .hamburger {
+                display: block;
+            }
+            .menu-list {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background: #FF8C42;
+                position: absolute;
+                top: 48px;
+                left: 0;
+                width: 100%;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 2px 10px #cc580377;
+                padding: 10px 0;
+            }
+            .menu-list.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-nav">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="menu-list" id="menu-list">
+            <li><a href="#">Página 1</a></li>
+            <li><a href="#">Página 2</a></li>
+            <li><a href="#">Página 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Exercício 7 - Menu Hamburger</h1>
+        <p>Ao reduzir a largura da janela para menos de 600px, clique no ícone ☰ para abrir/fechar o menu.</p>
+    </main>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('menu-list').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+

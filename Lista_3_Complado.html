@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 3 - Compilado de Exercícios</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section { margin-bottom: 60px; }
+        nav.compilado-nav {
+            margin: 16px 0 32px 0;
+        }
+        nav.compilado-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav.compilado-nav li {
+            margin: 0;
+        }
+        nav.compilado-nav a {
+            background: #ffa45b;
+            color: #542e0d;
+            padding: 7px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        nav.compilado-nav a:hover {
+            background: #ff8c42;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lista 3 – Compilado de Exercícios</h1>
+        <p>Todos os exercícios do módulo em um único arquivo, com navegação rápida.</p>
+    </header>
+    <nav class="compilado-nav">
+        <ul>
+            <li><a href="#ex1">Exercício 1</a></li>
+            <li><a href="#ex2">Exercício 2</a></li>
+            <li><a href="#ex3">Exercício 3</a></li>
+            <li><a href="#ex4-5">Exercício 4 e 5</a></li>
+            <li><a href="#ex6">Exercício 6</a></li>
+            <li><a href="#ex7">Exercício 7</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- EXERCÍCIO 1 -->
+        <section id="ex1">
+            <h2>Exercício 1 – Estrutura semântica</h2>
+            <header>
+                <h3>Missão</h3>
+                <p>Resolver os exercícios propostos, de modo a consolidar o aprendizado sobre os fundamentos do desenvolvimento web.</p>
+                <h3>Visão</h3>
+                <p>Adquirir habilidades sobre conceitos básicos de web, desenvolvendo autonomia e criatividade.</p>
+            </header>
+        </section>
+
+        <!-- EXERCÍCIO 2 -->
+        <section id="ex2">
+            <h2>Exercício 2 – Listas e Navegação</h2>
+            <h3>Meus Hobbies</h3>
+            <ul>
+                <li>Corrida de rua</li>
+                <li>Mergulho autônomo</li>
+                <li>Prática de artes marciais</li>
+                <li>Leitura</li>
+                <li>Trilhas na natureza</li>
+            </ul>
+            <h3>Como preparar um café coado</h3>
+            <ol>
+                <li>Ferva a água.</li>
+                <li>Coloque o filtro de papel no suporte.</li>
+                <li>Adicione o pó de café ao filtro.</li>
+                <li>Despeje a água quente sobre o pó, lentamente.</li>
+                <li>Espere o café passar e sirva.</li>
+            </ol>
+            <nav>
+                <h3>Links úteis</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- EXERCÍCIO 3 -->
+        <section id="ex3">
+            <h2>Exercício 3 – Formulário de Feedback</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="endereco">Endereço Completo:</label><br>
+                <input type="text" id="endereco" name="endereco"><br><br>
+                <label for="tipo">Tipo de Feedback:</label><br>
+                <select id="tipo" name="tipo">
+                    <option value="elogio">Elogio</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="critica">Crítica</option>
+                </select><br><br>
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="5" cols="40"></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- EXERCÍCIO 4 e 5 – Estilos no CSS (exemplo de uso das classes) -->
+        <section id="ex4-5">
+            <h2>Exercício 4 e 5 – CSS Básico, Classes e IDs</h2>
+            <p class="destaque">Este texto usa a classe <strong>.destaque</strong> (itálico, fundo suave).</p>
+            <p id="importante">Este parágrafo tem o ID <strong>#importante</strong> (borda superior espessa).</p>
+        </section>
+
+        <!-- EXERCÍCIO 6 – Galeria -->
+        <section id="ex6">
+            <h2>Exercício 6 – Galeria de Imagens</h2>
+            <div class="galeria-container">
+                <div class="galeria-grid">
+                    <figure>
+                        <img src="cobras/cascavel.png" alt="Cascavel">
+                        <figcaption>Cascavel</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cobras/cascavel2.png" alt="Cascavel (variação)">
+                        <figcaption>Cascavel (variação)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cobras/coral.png" alt="Coral Verdadeira">
+                        <figcaption>Coral Verdadeira</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cobras/jararaca.png" alt="Jararaca">
+                        <figcaption>Jararaca</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cobras/jararacucu.png" alt="Jararacucu">
+                        <figcaption>Jararacucu</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cobras/jiboia.png" alt="Jiboia">
+                        <figcaption>Jiboia</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cobras/surucucu.png" alt="Surucucu">
+                        <figcaption>Surucucu</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cobras/Urutu_Cruzeiro.png" alt="Urutu Cruzeiro">
+                        <figcaption>Urutu Cruzeiro</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIO 7 – Menu Hamburger -->
+        <section id="ex7">
+            <h2>Exercício 7 – Menu Hamburger</h2>
+            <nav class="menu-nav" style="margin-bottom:24px;">
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <ul class="menu-list" id="menu-list">
+                    <li><a href="#">Página 1</a></li>
+                    <li><a href="#">Página 2</a></li>
+                    <li><a href="#">Página 3</a></li>
+                </ul>
+            </nav>
+            <p>Reduza a largura da janela do navegador para menos de 600px e clique no ícone ☰ para abrir/fechar o menu.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Glaucio Rosa. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JS do menu hamburger do exercício 7 -->
+    <script>
+        // Garante que existe o botão hamburger antes de tentar usar
+        document.addEventListener("DOMContentLoaded", function(){
+            var hamburguer = document.getElementById('hamburger');
+            if(hamburguer){
+                hamburguer.addEventListener('click', function() {
+                    document.getElementById('menu-list').classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
